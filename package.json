@@ -1,0 +1,12 @@
+{
+  "title": "Android SDK Search",
+  "name": "androidsdksearch",
+  "version": "0.1.0",
+  "description": "A Firefox extension that adds an search integration and view source links for the Android SDK",
+  "main": "index.js",
+  "author": "Oleg Godovykh",
+  "engines": {
+    "firefox": ">=38.0a1"
+  },
+  "license": "Apache 2.0"
+}
