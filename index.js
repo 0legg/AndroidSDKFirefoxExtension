@@ -1,9 +1,10 @@
-var self = require('sdk/self');
+var pageMod = require('sdk/page-mod');
 
-// a dummy function, to show how tests work.
-// to see how to test this function, look at test/test-index.js
-function dummy(text, callback) {
-  callback(text);
-}
-
-exports.dummy = dummy;
+pageMod.PageMod({
+  include: [
+    /http(?:s)?:\/\/d(?:eveloper)?.android.com\/reference\/(.+)\/package-(summary|descr).html/,
+    /http(?:s)?:\/\/d(?:eveloper)?.android.com\/reference\/(.+).html/,
+    /http(?:s)?:\/\/d(?:eveloper)?.android.com\/reference\/android\/(R(?:\..+)?).html/
+  ],
+  contentScriptFile: "./ref-inject-code-search.js"
+});
